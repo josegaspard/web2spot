@@ -1,0 +1,74 @@
+.lets-create {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    .content {
+        display: flex;
+        @include desktop {
+            min-height: 223px;
+        }
+        @include tablet {
+            min-height: 200px;
+        }
+        @include mobile {
+            flex-direction: column;
+            min-height: 200px;
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+    &__text {
+        color: $purple;
+    }
+    .break-word {
+        display: block;
+    }
+    p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    h2 {
+        white-space: nowrap;
+        margin: 0;
+        @include tablet {
+            font-size: 36px;
+        }
+        @include desktop {
+            font-size: 52px;
+        }
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+    .up {
+        position: relative;
+        .line {
+            position: absolute;
+            z-index: -1;
+            @include tablet {
+                right: -20px;
+                bottom: 60px;
+            }
+            @include desktop {
+                right: -20px;
+                bottom: 30px;
+            }
+            @include mobile {
+                bottom: -37px;
+            }
+        }
+        @include mobile {
+            align-self: flex-start;
+        }
+    }
+    .down,
+    .middle {
+        align-self: flex-end;
+    }
+    .middle {
+        @include mobile {
+            align-self: center;
+        }
+    }
+}

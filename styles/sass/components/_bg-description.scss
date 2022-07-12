@@ -1,0 +1,180 @@
+.bg-description {
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    justify-content: center;
+    @include desktop {
+        max-height: 506px;
+    }
+    @include mobile {
+        // margin-top: 40px;
+    }
+    .container {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        z-index: 99;
+        text-align: center;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        min-width: 100% !important;
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include mobile {
+            align-items: center;
+            flex-direction: column;
+            padding: 10px 10px;
+            padding-top: 0;
+        }
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+    .side {
+        min-width: 300px;
+        max-width: 660px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        order: 1;
+        @include mobile {
+            gap: 20px;
+        }
+        @include tablet {
+            gap: 10px;
+        }
+        @include desktop {
+            gap: 50px;
+        }
+        &--img-side {
+            @include tablet {
+                min-width: 100%;
+                min-height: 550px;
+                order: 0;
+            }
+            @include desktop {
+                min-width: auto;
+                min-height: auto;
+                order: 2;
+            }
+            @include mobile {
+                min-width: 100%;
+                max-height: 550px;
+                min-height: 400px;
+                order: 0;
+            }
+            @media screen and (max-width: 460px) {
+                min-height: 160px;
+            }
+        }
+        &__img-flank {
+            min-width: 500px;
+            max-width: 60%;
+            @include tablet {
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+            @include tablet {
+                bottom: 0px;
+            }
+            @include desktop {
+                position: relative;
+                bottom: 50px;
+            }
+            @include mobile {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                max-height: 100%;
+                max-width: 100%;
+                min-width: 100%;
+            }
+            @media screen and (max-width: 460px) {
+                width: 160px;
+                height: 170px;
+                // min-width: 350px;
+            }
+        }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white;
+            font-size: 52px;
+            line-height: 120%;
+            font-weight: 700;
+            text-align: left;
+            max-width: 700px;
+            margin-left: 0;
+            margin-right: auto;
+            @include tablet {
+                font-size: 48px;
+            }
+            @include mobile {
+                font-size: 20px;
+            }
+            em {
+                font-style: normal !important;
+                color: transparent;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: white;
+                font-weight: 700;
+                @include mobile {
+                    -webkit-text-stroke-width: 1px;
+                }
+            }
+        }
+        p {
+            color: white;
+            font-size: 18px;
+            line-height: 120%;
+            font-weight: 300;
+            text-align: left;
+            strong {
+                color: #ffc669;
+                font-weight: 700;
+            }
+            @include mobile {
+                font-size: 10px;
+                line-height: 17px;
+            }
+        }
+    }
+    .btn__primary {
+        width: 209px;
+        padding: 16px 20px;
+        white-space: nowrap;
+        font-size: 18px;
+        font-family: Poppins, sans-serif;
+        border-radius: 12px;
+        align-self: center;
+        text-align: center;
+        p {
+            text-align: center;
+        }
+        @include mobile {
+            font-size: 12px;
+            width: 134px;
+            height: 40px;
+        }
+    }
+    .overlay {
+        opacity: 0.75;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+}

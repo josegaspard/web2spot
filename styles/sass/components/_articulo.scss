@@ -1,0 +1,218 @@
+.single {
+    .container {
+        padding-left: 0px;
+        padding-right: 0px;
+        @include tablet {
+            width: 100%;
+        }
+    }
+    &-principal {
+        margin-top: 82px;
+        &__text {
+            h1 {
+                font-size: 28px;
+                line-height: 120%;
+                font-weight: 700;
+                color: #29275f;
+                max-width: 736px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                @include tablet {
+                    font-size: 62px;
+                }
+            }
+            &__category {
+                text-align: center;
+                margin-bottom: 16px;
+                li {
+                    list-style: none;
+                    a {
+                        padding: 16px;
+                        color: #29275f;
+                        background: #f4f2ff;
+                        border-radius: 16px;
+                        display: inline-block;
+                        margin-right: 16px;
+                        text-transform: uppercase;
+                        &:first-child {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+            &__date {
+                margin-top: 32px;
+                margin-bottom: 32px;
+                p {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 120%;
+                    color: #29275f;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-transform: uppercase;
+                    strong {
+                        margin-right: 8px;
+                        font-weight: 700;
+                        @include mobile {
+                            display: none;
+                        }
+                        text-transform: uppercase;
+                    }
+                    &::before {
+                        content: '';
+                        width: 118px;
+                        height: 1px;
+                        display: inline-block;
+                        background: #29275f1a;
+                        margin-right: 50px;
+                    }
+                    &::after {
+                        content: '';
+                        width: 118px;
+                        height: 1px;
+                        display: inline-block;
+                        margin-left: 50px;
+                        background: #29275f1a;
+                    }
+                }
+            }
+        }
+        &__img {
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 32px;
+            }
+        }
+        &__content {
+            p {
+                font-size: 16px;
+                line-height: 140%;
+                color: #302e57;
+                margin-bottom: 16px;
+                @include tablet {
+                    font-size: 18px;
+                }
+                strong {
+                    font-weight: 700;
+                }
+            }
+            .wp-block-image {
+                img {
+                    width: 100%;
+                    object-fit: cover !important;
+                }
+            }
+            .wp-block-quote {
+                position: relative;
+                &::before {
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg width='64' height='44' viewBox='0 0 64 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M15.7405 43.9315C11.9351 44.274 8.64865 43.332 5.88108 41.1055C3.28649 38.7077 1.55676 35.6248 0.691892 31.8568C0 28.6026 -0.172973 25.2627 0.172973 21.8373C0.691892 18.2406 1.81622 14.9864 3.54595 12.0747C5.44865 8.99183 8.04324 6.3371 11.3297 4.11055C14.6162 1.884 18.7676 0.513819 23.7838 0L25.6 6.42273C23.0054 7.10782 20.2378 8.30673 17.2973 10.0195C14.3568 11.7322 12.4541 14.6438 11.5892 18.7544L15.4811 17.9837C19.4595 17.8124 22.8324 18.9257 25.6 21.3235C28.5405 23.7213 30.0108 26.7186 30.0108 30.3153C30.0108 33.912 28.627 37.0806 25.8595 39.8209C23.0919 42.39 19.7189 43.7602 15.7405 43.9315ZM49.9892 43.9315C46.0108 44.274 42.7243 43.332 40.1297 41.1055C37.5351 38.7077 35.8054 35.6248 34.9405 31.8568C34.0757 28.6026 33.9027 25.2627 34.4216 21.8373C34.9405 18.2406 36.0649 14.9864 37.7946 12.0747C39.6973 8.99183 42.2919 6.3371 45.5784 4.11055C48.8649 1.884 52.9297 0.513819 57.773 0L59.8486 6.42273C57.2541 7.10782 54.4 8.30673 51.2865 10.0195C48.3459 11.7322 46.4432 14.6438 45.5784 18.7544C46.2703 18.5831 46.8757 18.4975 47.3946 18.4975C48.0865 18.3262 48.8649 18.1549 49.7297 17.9837C53.7081 17.8124 57.0811 18.9257 59.8486 21.3235C62.6162 23.7213 64 26.7186 64 30.3153C64 33.912 62.6162 37.0806 59.8486 39.8209C57.2541 42.39 53.9676 43.7602 49.9892 43.9315Z' fill='%23363485'/%3E%3C/svg%3E%0A");
+                    width: 50px;
+                    height: 34px;
+                    position: absolute;
+                    background-size: cover;
+                    top: 0;
+                    left: 0;
+                    @include tablet {
+                        width: 64px;
+                        height: 44px;
+                    }
+                }
+                p {
+                    font-size: 20px;
+                    line-height: 120%;
+                    font-weight: 700;
+                    padding-left: 64px;
+                    @include tablet {
+                        font-size: 32px;
+                        padding-left: 96px;
+                    }
+                    a {
+                        color: $primary;
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &-others {
+        background: rgba(63, 61, 137, 0.1);
+        .title {
+            font-size: 28px;
+            line-height: 120%;
+            color: $purple;
+            margin-bottom: 44px;
+            text-align: center;
+            padding-top: 40px;
+            @include tablet {
+                padding-top: 0px;
+                font-size: 40px;
+            }
+        }
+        &__container {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-flow: wrap;
+        }
+        &__item {
+            margin-bottom: 32px;
+            @media (min-width: 1100px) {
+                width: col(11, 35);
+                margin-right: col(1, 35);
+                margin-bottom: 0px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 32px;
+            }
+            &:last-child {
+                margin-right: 0px;
+            }
+            h3 {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 140%;
+                color: #1f1d5e;
+                margin-top: 16px;
+            }
+            &__date {
+                display: flex;
+                justify-content: space-between;
+                .post-categories {
+                    li {
+                        list-style: none;
+                        a {
+                            text-decoration: none;
+                            color: $purple;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 140%;
+                            position: relative;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                display: block;
+                                width: 100%;
+                                height: 1px;
+                                background: $primary;
+                            }
+                        }
+                    }
+                }
+                font-size: 12px;
+                line-height: 140%;
+                color: $primary;
+                font-weight: 700;
+            }
+        }
+    }
+}

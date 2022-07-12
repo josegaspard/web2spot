@@ -1,0 +1,155 @@
+.our-packs {
+    position: relative;
+    .container {
+        padding: 0;
+        @include mobile {
+            width: 100%;
+        }
+        @include tablet {
+            padding-bottom: 110px;
+        }
+    }
+    .top-wave {
+        top: -120px;
+        z-index: 10;
+        .shape-fill {
+            fill: white;
+        }
+        @include mobile {
+            width: 100%;
+        }
+    }
+    &__title {
+        font-size: 32px;
+        line-height: 40px;
+        color: $purple;
+        text-align: center;
+        font-weight: 700;
+        width: 100%;
+        margin-bottom: 24px;
+        @include tablet {
+            font-size: 52px;
+            line-height: 78px;
+            margin-bottom: 32px;
+        }
+        @include mobile {
+            font-size: 25px;
+        }
+    }
+    &__plans {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: scroll;
+        padding-top: 24px;
+        padding-left: 32px;
+        padding-right: 32px;
+        @include tablet {
+            width: col(31, 37);
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            flex-flow: wrap;
+            overflow-x: initial;
+            justify-content: center;
+        }
+        &__item {
+            padding-top: 38px;
+            padding-left: 35px;
+            padding-right: 35px;
+            padding-bottom: 24px;
+            border: 1px solid #e2e5e9;
+            box-sizing: border-box;
+            border-radius: 24px;
+            min-width: 90%;
+            margin-right: 16px;
+            @include tablet {
+                min-width: auto;
+                width: col(10, 31);
+                margin-right: 16px;
+            }
+            &:last-child {
+                margin-right: 0px;
+            }
+            h3 {
+                font-size: 28px;
+                line-height: 110%;
+                font-family: $poppins;
+                font-weight: 400;
+                color: $purple;
+                text-align: center;
+                strong {
+                    display: block;
+                    font-weight: 700;
+                }
+            }
+            h4 {
+                font-size: 16px;
+                line-height: 120%;
+                font-weight: 700;
+                color: $purple;
+                text-align: center;
+                margin-top: 18px;
+                margin-bottom: 24px;
+                strong {
+                    font-weight: 700;
+                    font-size: 32px;
+                }
+            }
+            ul {
+                li {
+                    list-style: none;
+                    position: relative;
+                    padding-left: 16px;
+                    font-size: 12px;
+                    line-height: 140%;
+                    color: #414964;
+                    margin-bottom: 8px;
+                    &::before {
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        background: $purple;
+                        border-radius: 50%;
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 4px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+            &.active {
+                position: relative;
+                h3,
+                h4 {
+                    color: $primary;
+                }
+                span {
+                    position: absolute;
+                    top: -16px;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    display: inline-block;
+                    z-index: 2;
+                    background-color: $primary;
+                    color: white;
+                    padding: 4px 24px;
+                    font-size: 15px;
+                    line-height: 156%;
+                    font-weight: 700;
+                    border-radius: 20px;
+                    width: 169px;
+                }
+                li {
+                    &::before {
+                        background: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+$height-section: 416px;
+.contact-section {
+    min-height: $height-section;
+    background: linear-gradient(to right, #ff2d4f 25.41%, rgba(255, 45, 79, 0) 113.57%);
+    @include mobile {
+        min-height: auto;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0px 70px;
+        @media screen and (max-width: 1300px) {
+            height: 600px;
+        }
+        @include mobile {
+            height: 330px;
+            padding: 0px;
+        }
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        gap: 35px;
+        min-height: $height-section;
+        @include mobile {
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        @include tablet {
+            min-height: 300px;
+        }
+        align-self: flex-start;
+    }
+    &__title {
+        font-size: 52px;
+        width: 580px;
+        color: white;
+        span {
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: white;
+            @include mobile {
+                display: block;
+            }
+        }
+        @include mobile {
+            font-size: 25px;
+            width: auto;
+        }
+    }
+    &__btn {
+        max-width: 212px;
+        padding: 16px;
+        background-color: $purple;
+        color: white;
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+    &__right {
+        position: relative;
+        min-height: $height-section;
+        width: 623px;
+        content: '';
+        @media screen and (max-width: 1300px) {
+            top: -40px;
+            position: relative;
+        }
+        @include mobile {
+            top: 0px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        max-width: 100%;
+        @include mobile {
+            // min-width: 320px;
+            position: relative;
+            width: 65%;
+            max-width: 300px;
+            // max-width: 300px;
+            top: 0px;
+            // transform: translate(-50%, 0);
+        }
+    }
+    &__side {
+        @include mobile {
+            min-height: 200px;
+        }
+    }
+}

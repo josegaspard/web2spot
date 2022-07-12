@@ -1,0 +1,153 @@
+$bg-color: #f0f0f0;
+.our-clients {
+    background: $bg-color;
+    position: relative;
+    @include mobile {
+        padding-top: 50px;
+        padding-bottom: 48px;
+    }
+    .wave {
+        .shape-fill {
+            fill: $bg-color;
+            opacity: 1;
+        }
+    }
+    .container {
+        z-index: 10;
+        @include tablet {
+            padding: 70px 50px;
+            padding-top: 100px;
+        }
+        @include desktop {
+            padding-top: 150px;
+        }
+    }
+    &__title {
+        font-size: 52px;
+        line-height: 120%;
+        color: #363485;
+        font-weight: 700;
+        text-align: center;
+        z-index: 7;
+        margin-bottom: 44px;
+        white-space: nowrap;
+        @include desktop {
+            margin-bottom: 80px;
+        }
+        @include mobile {
+            font-size: 25px;
+        }
+    }
+    &-slider {
+        position: relative;
+        .owl-prev {
+            position: relative;
+            left: -107px;
+            @include mobile {
+                left: -60px;
+            }
+            &::before {
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='40' viewBox='0 0 24 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Csvg width='25' height='40' viewBox='0 0 25 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.9093 38.7516C21.3751 40.2392 18.9255 40.2016 17.4379 38.6674L1.9608 22.7067C0.505432 21.2058 0.505432 18.8203 1.9608 17.3195L17.4379 1.3587C18.9255 -0.175412 21.3752 -0.213097 22.9093 1.27453C24.4434 2.76215 24.4811 5.21176 22.9934 6.74587L10.1283 20.0131L22.9934 33.2803C24.4811 34.8144 24.4434 37.264 22.9093 38.7516Z' fill='%23FF2D4F'/%3E%3C/svg%3E%3C/svg%3E%0A");
+                width: 24px;
+                height: 40px;
+                display: inline-block;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &.disabled {
+                &::before {
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1814 3.98863H2.62458L5.31552 1.31072C5.61578 1.01188 5.61694 0.526229 5.31809 0.225969C5.01925 -0.0743295 4.53356 -0.0754414 4.2333 0.223361L0.225335 4.212C-0.074158 4.51084 -0.0758071 4.99879 0.224568 5.29863L4.23322 9.288C4.53345 9.58676 5.01914 9.58573 5.31802 9.28539C5.61686 8.98513 5.61571 8.49947 5.31545 8.20063L2.62458 5.52272H14.1814C14.6051 5.52272 14.9485 5.17932 14.9485 4.75568C14.9485 4.33204 14.6051 3.98863 14.1814 3.98863Z' fill='white'/%3E%3C/svg%3E");
+                    width: 24px;
+                    height: 40px;
+                    display: inline-block;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        .owl-next {
+            position: relative;
+            right: -107px;
+            @include mobile {
+                left: 60px;
+            }
+            &::before {
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='40' viewBox='0 0 24 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.82939 1.27451C3.3635 -0.213116 5.8131 -0.17543 7.30073 1.35868L22.7779 17.3195C24.2332 18.8203 24.2332 21.2058 22.7779 22.7066L7.30073 38.6674C5.8131 40.2015 3.3635 40.2392 1.82939 38.7516C0.295273 37.264 0.257587 34.8144 1.74521 33.2803L14.6104 20.0131L1.74521 6.74585C0.257587 5.21174 0.295273 2.76213 1.82939 1.27451Z' fill='%23FF2D4F'/%3E%3C/svg%3E%0A");
+                width: 24px;
+                height: 40px;
+                display: inline-block;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &.disabled {
+                &::before {
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.753886 5.42736L12.1112 5.42736L9.46669 8.05903C9.17161 8.35271 9.17048 8.82998 9.46416 9.12506C9.75785 9.42017 10.2352 9.42126 10.5302 9.12762L14.469 5.20786C14.7633 4.91418 14.7649 4.43464 14.4697 4.13998L10.5303 0.219506C10.2353 -0.0740997 9.75796 -0.0730828 9.46424 0.222068C9.17056 0.517143 9.17169 0.994412 9.46677 1.28809L12.1112 3.91976L0.753886 3.91976C0.337562 3.91976 8.5713e-05 4.25724 8.56766e-05 4.67356C8.56402e-05 5.08988 0.337562 5.42736 0.753886 5.42736Z' fill='white'/%3E%3C/svg%3E");
+                    width: 15px;
+                    height: 10px;
+                    display: inline-block;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        .owl-nav {
+            position: absolute !important;
+            max-width: 1184px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: 100%;
+            display: flex;
+            flex-flow: wrap;
+            top: 30px;
+            justify-content: space-between !important;
+            @include mobile {
+                position: absolute !important;
+                justify-content: space-between !important;
+                top: 10px;
+                left: 0px !important;
+                max-width: 480px;
+                text-align: left;
+                width: 100%;
+                padding: 20px;
+            }
+        }
+        .owl-prev,
+        .owl-next {
+            width: 48px;
+            height: 48px;
+            border-radius: 50% !important;
+            background: transparent !important;
+            margin: 0px !important;
+            &::before {
+                position: relative;
+                top: 11px;
+            }
+            &.disabled {
+                border-color: #ffffff !important;
+                background: transparent !important;
+            }
+            span {
+                width: 48px;
+                height: 48px;
+                display: block;
+                color: transparent;
+            }
+        }
+        &__item {
+            width: 100%;
+            height: 140px;
+            background-size: cover;
+            &__img {
+                width: 100%;
+                height: 100%;
+                background-size: cover !important;
+                background-position: center !important;
+                border-radius: 8px;
+            }
+        }
+    }
+}

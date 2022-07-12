@@ -1,0 +1,132 @@
+.hero-beginning {
+    .container {
+        position: relative;
+        min-width: 100%;
+        background: radial-gradient(55% 220.71% at 105% 72.44%, rgba(230, 230, 230, 0) 0%, rgba(54, 52, 133, 0.08) 0.01%, rgba(54, 52, 133, 0.21) 13.54%, rgba(54, 52, 133, 0.51) 42.24%, rgba(54, 52, 133, 0.79) 68.06%, #363485 100%);
+        @include tablet {
+            display: flex;
+            min-height: 600px;
+            padding: 0;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include desktop {
+            min-height: 750px;
+        }
+        @include mobile {
+            padding-top: 100px;
+            // height: 100vh;
+        }
+    }
+    h1,
+    p {
+        color: white;
+    }
+    .btn {
+        width: fit-content;
+        padding: 5px 25px;
+        box-sizing: border-box;
+        p {
+            font-size: 15px;
+            text-align: center;
+        }
+    }
+    .raya {
+        position: absolute;
+        z-index: -1;
+        max-width: 100%;
+        @include tablet {
+            top: 15px;
+            right: 30px;
+        }
+        @include desktop {
+            top: 25px;
+            right: -80px;
+        }
+    }
+    .wave {
+        bottom: -5px;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include tablet {
+            padding-left: 20px;
+            max-width: 400px;
+        }
+        @include desktop {
+            max-width: 600px;
+            padding-left: 100px;
+            padding-bottom: 80px;
+        }
+        @include mobile {
+            max-width: 300px;
+            padding-left: 10px;
+            padding-bottom: 80px;
+        }
+        @media only screen and (max-width: 500px) {
+            padding-bottom: 50px;
+        }
+    }
+    &__right {
+        width: 55%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-self: flex-end;
+        @include mobile {
+            margin-left: auto;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    &__img {
+        width: 100%;
+        min-width: 180px;
+        max-width: 803px;
+        position: relative;
+        @include tablet {
+            bottom: 50px;
+        }
+        @include desktop {
+            bottom: 120px;
+        }
+        @include mobile {
+            bottom: 10px;
+            margin-left: auto;
+            z-index: 20;
+        }
+    }
+    &__title {
+        white-space: nowrap;
+        z-index: 10;
+        @include desktop {
+            font-size: 65px;
+        }
+        @include tablet {
+            font-size: 50px;
+        }
+    }
+    &__content {
+        font-size: 18px;
+        @include mobile {
+            font-size: 10px;
+            line-height: 20px;
+        }
+    }
+    &__btns {
+        display: flex;
+        gap: 15px;
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+    &__header {
+        position: relative;
+        width: 80%;
+        z-index: 5;
+    }
+}

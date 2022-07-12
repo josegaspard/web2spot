@@ -1,0 +1,123 @@
+$repeat: auto-fill;
+$line-color: $red;
+.services-grid {
+    @include mobile {
+        padding-bottom: 100px;
+    }
+    .line {
+        width: 25px;
+        height: 3px;
+        background-color: $red;
+        border-bottom: 1px solid $line-color;
+    }
+    .grid {
+        display: grid;
+        @include desktop {
+            grid-template-columns: repeat($repeat, 374px);
+        }
+        gap: 50px;
+        justify-content: center;
+        .element {
+            background-color: white;
+            position: relative;
+            width: 100%;
+            max-width: 374px;
+            min-width: 350px;
+            box-shadow: 0px 4px 13px 2px rgba(54, 52, 133, 0.2);
+            border-radius: 12px;
+            height: 600px;
+            padding: 0px 52px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 5;
+            @include mobile {
+                width: 280px;
+                height: 449px;
+                min-width: auto;
+                padding: 0 10px;
+                top: 0px !important;
+            }
+            &:nth-of-type(even) {
+                position: relative;
+                top: 40px;
+            }
+            &:hover {
+                .img--hover {
+                    display: block;
+                    filter: brightness(60%);
+                }
+                * {
+                    color: white;
+                }
+                .line {
+                    border: 1px solid white;
+                    background-color: white;
+                }
+            }
+            &__title {
+                font-size: 32px;
+                white-space: nowrap;
+                margin-bottom: 10px;
+                margin-top: 0px;
+                @include mobile {
+                    font-size: 22px;
+                }
+            }
+            &__content {
+                font-size: 16px;
+                margin-bottom: 20px;
+                margin-top: 0px;
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+            &__icon {
+                max-width: 52px;
+                margin-bottom: 50px;
+            }
+            .img--hover {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100% !important;
+                min-width: 100% !important;
+                z-index: -1;
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        .name {
+            color: $purple;
+            font-size: 22px;
+            font-weight: 600;
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+        span {
+            display: inline;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            gap: 9.5px;
+            white-space: nowrap;
+            max-height: 32px;
+            justify-self: end;
+            color: $red;
+            .line {
+                display: flex;
+            }
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+        &.indivual {
+            justify-content: flex-end;
+        }
+    }
+}

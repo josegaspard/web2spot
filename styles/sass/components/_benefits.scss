@@ -1,0 +1,76 @@
+$bg-color: #f2f4f8;
+$benefits-break: 740px;
+$principal-row-break: 1239px;
+.benefits {
+    background-color: $bg-color;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 85px;
+    row-gap: 50px;
+    position: relative;
+    @include tablet {
+        padding-bottom: 130px;
+    }
+    @include desktop {
+        padding: 150px 0px;
+    }
+    @include mobile {
+        padding-bottom: 50px;
+    }
+    @media only screen and (max-width: $principal-row-break) {
+        padding-top: 70px;
+    }
+    .left {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            text-align: center;
+            color: $purple;
+            font-size: 32px;
+            margin: 0;
+            @include mobile {
+                font-size: 25px;
+            }
+        }
+    }
+    .right {
+        max-width: 750px;
+        p {
+            font-size: 18px;
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-top: 20px;
+            @media only screen and (max-width: $benefits-break) {
+                justify-content: center;
+            }
+        }
+        .text {
+            &__principal {
+                @media only screen and (max-width: $benefits-break) {
+                    text-align: center;
+                }
+            }
+        }
+        @include tablet {
+            padding: 0px 20px;
+        }
+        @include mobile {
+            padding: 0px 20px;
+        }
+        @include desktop {
+            padding: 0px;
+        }
+    }
+    .benefit {
+        width: 325px;
+    }
+}

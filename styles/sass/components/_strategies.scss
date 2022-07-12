@@ -1,0 +1,92 @@
+.strategies {
+    position: relative;
+    .final-message {
+        color: $purple;
+        text-align: center;
+        font-weight: 700;
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+    &__title {
+        text-align: center;
+        color: $yellow;
+        font-size: 52px;
+        @include mobile {
+            font-size: 25px;
+        }
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 94px;
+        margin: 80px 0;
+        @include mobile {
+            gap: 47px;
+            margin: 40px 0;
+        }
+    }
+    &__item {
+        position: relative;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        padding: 42px 58px;
+        max-width: 640px;
+        min-height: 168px;
+        display: flex;
+        flex-direction: column;
+        @include mobile {
+            padding: 15px;
+            min-height: 127px;
+            width: 260px;
+            justify-content: center;
+            border-radius: 15px;
+        }
+        &:nth-of-type(even) {
+            @include tablet {
+                right: 60px;
+                img {
+                    right: -60px;
+                }
+            }
+            @include mobile {
+                img {
+                    right: -30px;
+                }
+            }
+        }
+        &:nth-of-type(odd) {
+            img {
+                left: -60px;
+            }
+            @include mobile {
+                img {
+                    left: -26px;
+                }
+            }
+        }
+        &__title {
+            font-size: 22px;
+            @include mobile {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+        &__text {
+            font-size: 16px;
+            @include mobile {
+                font-size: 10px;
+                line-height: 17px;
+            }
+        }
+        &__img {
+            position: absolute;
+            top: -60px;
+            @include mobile {
+                width: 52px;
+                top: -26px;
+            }
+        }
+    }
+}

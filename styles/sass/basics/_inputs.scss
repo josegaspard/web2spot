@@ -1,0 +1,159 @@
+.input-field {
+    position: relative;
+    margin-top: 16px;
+    min-height: 54px;
+    box-sizing: border-box;
+    input[type="tel"],
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    textarea,
+    select {
+        color: $gray;
+        border-bottom: 1px solid #CFD0E6;
+        width: 100%;
+        height: 54px;
+        outline: none;
+        font-size: 16px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -webkit-appearance: none;
+        font-family: $primary-text;
+        font-weight: 300;
+        appearance: none;
+        -webkit-transition: border 0.3s, -webkit-box-shadow 0.3s;
+        transition: box-shadow 0.3s, border 0.3s, -webkit-box-shadow 0.3s;
+        background: transparent;
+        position: relative;
+        z-index: 20;
+    }
+    .show-error {
+        display: none;
+    }
+    label {
+        color: #9D9EB1;
+        position: absolute;
+        bottom: 40%;
+        left: 0px;
+        top: 20px;
+        display: block;
+        margin: 0 auto;
+        font-size: 16px;
+        z-index: 10;
+        font-family: $primary-text;
+        font-weight: 300;
+        cursor: text;
+        -webkit-transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+        transition: transform 0.2s ease-out, color 0.2s ease-out, -webkit-transform 0.2s ease-out;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        text-align: initial;
+        &.active {
+            -webkit-transform: translateY(-12px) scale(0.6);
+            transform: translateY(-12px) scale(0.6);
+            bottom: 39%;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+    &:hover {
+        input {
+            border-color: $primary;
+        }
+    }
+    &.active {
+        input[type="tel"],
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"] {
+            padding-top: 16px;
+            color: $gray;
+            font-weight: 400;
+        }
+        label {
+            -webkit-transform: translateY(-18px) scale(0.8);
+            transform: translateY(-18px) scale(0.8);
+            bottom: 36%;
+            font-weight: 400;
+            color: #76778B;
+            font-weight: 400;
+        }
+        textarea {
+            padding-top: 43px;
+            label {
+                -webkit-transform: translateY(-12px) scale(0.8);
+                transform: translateY(-12px) scale(0.8);
+                font-weight: 700;
+                bottom: 3%;
+            }
+        }
+    }
+    &.hidden {
+        display: none !important;
+    }
+    textarea {
+        height: 100px;
+        resize: none;
+    }
+}
+
+.btn-form {
+    background: $primary;
+    border: 1px solid $primary;
+    box-sizing: border-box;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 20px 0px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    margin-top: 5px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    &:hover {
+        background-color: $primary;
+        box-shadow: 0px 0px 10px $primary;
+        ;
+    }
+}
+
+.group-form-2 {
+    @include tablet {
+        display: flex;
+        flex-flow: wrap;
+        width: 100%;
+        .input-field {
+            width: col(7, 15);
+            margin-right: col(1, 15);
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+    &:nth-child(3) {
+        margin-right: 0;
+    }
+    &:last-child {
+        margin-bottom: 32px;
+    }
+}
