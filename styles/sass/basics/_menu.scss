@@ -17,13 +17,16 @@
     align-items: center;
     justify-content: center;
     max-width: 100%;
+
     @include tablet {
         position: fixed;
+
         &.actived,
         &.active {
             background-color: white;
         }
     }
+
     .container {
         z-index: 30;
         position: relative;
@@ -31,6 +34,7 @@
         padding: 8px 0px;
         width: 100%;
         max-width: 100%;
+
         @include desktop {
             padding: 0;
             width: 100%;
@@ -41,13 +45,16 @@
             justify-content: space-between;
         }
     }
+
     &-brand {
         width: col(27, 37);
         float: left;
         padding-left: col(2, 31);
+
         @include tablet {
             padding-left: 0px;
         }
+
         @include desktop {
             width: col(7, 31);
             height: 100%;
@@ -55,17 +62,21 @@
             display: inline-block;
             vertical-align: middle;
         }
+
         &__item {
             display: inline-block;
+
             img {
                 height: 40px;
                 margin-top: 12px;
+
                 @include tablet {
                     margin-top: 0px;
                     height: 74px;
                     margin-left: 20px;
                     padding: 12px 0px;
                 }
+
                 @include desktop {
                     height: 74px;
                     margin-left: 0px;
@@ -74,6 +85,7 @@
             }
         }
     }
+
     &-nav {
         height: 0px;
         opacity: 0;
@@ -82,6 +94,7 @@
         clear: both;
         transition: ease-in-out 0.3s;
         margin-top: 10px;
+
         @include desktop {
             clear: initial;
             height: 100%;
@@ -92,21 +105,26 @@
             width: col(22.5, 31);
             text-align: right;
         }
+
         .main-navegation {
             @media only screen and (max-width: 1250px) {
                 height: 0px;
                 overflow: hidden;
             }
+
             &.active {
                 height: auto;
                 background: white;
             }
+
             ul {
                 padding-top: 10px;
+
                 @include tablet {
                     padding-top: 0px;
                     height: 100%;
                 }
+
                 li {
                     border-top: 1px solid $gray;
                     list-style: none;
@@ -115,14 +133,17 @@
                     transition: ease-in-out 0.3s all;
                     border-left: 1px solid $gray;
                     border-right: 1px solid $gray;
+
                     &:nth-child(6) {
                         margin-right: 16px;
                     }
+
                     @include mobile {
                         border-top: 1px solid $gray;
                         padding: 16px;
                         text-align: left;
                         position: relative;
+
                         &::after {
                             content: '';
                             display: block;
@@ -137,13 +158,16 @@
                             right: 24px;
                             top: 24px;
                         }
+
                         &:nth-child(6) {
                             border-bottom: 1px solid $gray;
                             margin-right: 0px;
                         }
                     }
+
                     @media only screen and (max-width: 321px) {
                         padding: 8px;
+
                         &::after {
                             content: '';
                             display: block;
@@ -158,10 +182,12 @@
                             top: 20px;
                         }
                     }
+
                     @include tablet {
                         border: 0px;
                         margin-top: 10px;
                     }
+
                     a {
                         padding: 10px 0px;
                         display: inline-block;
@@ -170,6 +196,7 @@
                         line-height: 15px;
                         position: relative;
                         color: $gray;
+
                         &::before {
                             content: '';
                             width: 0%;
@@ -184,12 +211,15 @@
                             -o-transition: all 0.3s ease-in-out;
                             transition: all 0.3s ease-in-out;
                         }
+
                         @include tablet {
                             display: initial;
                             width: auto;
                         }
+
                         &:hover {
                             color: $primary;
+
                             @include tablet {
                                 &::before {
                                     width: 100%;
@@ -197,26 +227,32 @@
                             }
                         }
                     }
+
                     &.current_page_item {
                         @include tablet {
                             a {
                                 color: $primary;
+
                                 &::before {
                                     width: 100%;
                                 }
                             }
                         }
                     }
+
                     ul {
                         display: none;
+
                         li {
                             &:last-child {
                                 color: white !important;
-                                background-color: $purple !important;
+                                background-color: $purple  !important;
                             }
                         }
                     }
+
                     position: relative;
+
                     &:hover {
                         @include tablet {
                             ul {
@@ -230,28 +266,34 @@
                                 border-radius: 18px;
                                 font-size: 16px;
                                 box-shadow: 0px 20px 64px rgba(111, 103, 164, 0.35);
+
                                 li {
                                     text-align: center;
                                     width: 100%;
                                     border-bottom: 1px solid lightgray;
+
                                     &:last-child {
                                         border: 0px;
                                         background: white;
+
                                         a {
                                             &:hover {
                                                 color: $primary;
                                             }
                                         }
+
                                         &:hover {
                                             box-shadow: none;
                                         }
                                     }
+
                                     a {
                                         &::before {
                                             display: none;
                                         }
                                     }
                                 }
+
                                 &::before {
                                     content: '';
                                     position: absolute;
@@ -265,15 +307,18 @@
                             }
                         }
                     }
+
                     &:last-child {
                         @include desktop {
                             background-color: $primary;
                             color: white;
                             border-radius: 12px;
                             font-weight: 800;
+
                             &:hover {
                                 box-shadow: 0px 0px 10px $primary;
                             }
+
                             a {
                                 color: white;
                                 font-weight: 700;
@@ -284,6 +329,7 @@
                     }
                 }
             }
+
             @include tablet {
                 ul {
                     li {
@@ -291,11 +337,13 @@
                         text-align: left;
                         padding: 0px !important;
                         color: $gray;
+
                         @include tablet {
                             display: inline-block;
                             margin: 0;
                             margin-right: 32px;
                         }
+
                         a {
                             padding: 20px 0px;
                             display: inline-block;
@@ -303,6 +351,7 @@
                             color: white;
                             font-weight: 500;
                             transition: ease-in-out 0.3s all;
+
                             @include tablet {
                                 display: block;
                                 width: auto;
@@ -312,6 +361,7 @@
                 }
             }
         }
+
         &.active {
             width: 100%;
             margin-top: 20px;
@@ -320,23 +370,29 @@
             opacity: 1;
             text-align: center;
             z-index: 80;
+
             .main-navegation {
                 height: auto;
+
                 @include mobile {
                     height: 100vh;
                     background: white;
                 }
             }
+
             nav {
                 div {
                     ul {
                         padding-bottom: 20px;
+
                         li {
                             border: 0px;
                             border-top: 1px solid #e4e4e4;
+
                             @include tablet {
                                 border: 0px;
                             }
+
                             a {
                                 color: $red;
                             }
@@ -345,11 +401,13 @@
                 }
             }
         }
+
         &.open-submenu {
             .menu {
                 @include mobile {
                     position: relative;
                     right: 100%;
+
                     .sub-menu {
                         display: block;
                         position: fixed;
@@ -363,22 +421,27 @@
             }
         }
     }
+
     &-sandwich {
         float: right;
         text-align: right;
         padding-top: 20px;
         transition: ease-in-out 0.3s;
         padding-right: 18px;
+
         @include tablet {
             padding-right: col(1, 31);
         }
+
         @include desktop {
             display: none;
         }
+
         a {
             color: $primary;
             transition: ease-in-out 0.3s;
         }
+
         .menu {
             height: 2px;
             width: 22px;
@@ -390,12 +453,15 @@
             -ms-transition: all 0.3s ease-in-out;
             -o-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
+
             &-3 {
                 margin: 0;
             }
         }
+
         &.active {
             padding-top: -10px;
+
             .menu {
                 &-1 {
                     -webkit-transform: rotate(45deg);
@@ -405,9 +471,11 @@
                     -ms-transform-origin: 0% 90%;
                     transform-origin: 0% 90%;
                 }
+
                 &-2 {
                     opacity: 0;
                 }
+
                 &-3 {
                     -webkit-transform: rotate(-45deg);
                     -ms-transform: rotate(-45deg);
@@ -419,62 +487,77 @@
             }
         }
     }
+
     @include desktop {
         &.active {
             height: 70px;
             background: $primary;
+
             .container {
                 max-width: 95%;
+
                 .site-header-brand__item {
                     display: inline-block;
+
                     img {
                         height: 70px !important;
                         margin-top: 0px;
                     }
                 }
+
                 .site-header-nav {
                     margin-top: 15px;
                 }
             }
         }
+
         &.actived,
         &.active {
             p {
                 color: $gray;
             }
+
             height: 70px;
             background: white;
             box-shadow: 0 5px 40px #dfdfdf;
+
             .site-header-brand {
                 padding-bottom: 0px;
             }
+
             .site-header-nav {
                 display: flex !important;
                 align-items: center !important;
                 justify-content: flex-end;
             }
+
             svg {
                 padding: 0;
                 height: auto !important;
                 margin: 0;
                 position: relative;
                 top: -5px;
+
                 path {
                     fill: orange;
                 }
             }
+
             .phone-contact {
                 a {
                     color: #ffc600;
                 }
+
                 svg {
                     top: 0px;
                     margin-right: 8px;
                 }
             }
+
             li a {
-                color: $gray !important;
+                color: white !important;
             }
+
             li {
                 &:last-child {
                     a {
@@ -482,21 +565,27 @@
                     }
                 }
             }
+
             .container {
-                max-width: 1184px;
+                max-width: 100%;
+
                 @include tablet {
                     padding: 0;
                 }
+
                 .site-header-brand__item {
                     display: inline-block;
                 }
             }
         }
     }
+
     @media only screen and (max-width: 1199px) {
+
         &.actived,
         &.active {
             background-color: #fff;
+
             .site-header-brand {
                 svg {
                     path {
@@ -506,6 +595,7 @@
             }
         }
     }
+
     .overlay {
         width: 100%;
         height: 100%;
@@ -515,13 +605,16 @@
         transition: ease-in-out 0.3s;
         display: none;
     }
+
     &-services {
         a {
-            color: $purple !important;
+            color: $purple  !important;
+
             &::before {
-                background-color: $purple !important;
+                background-color: $purple  !important;
             }
         }
+
         li {
             &:last-child {
                 a {
@@ -531,11 +624,14 @@
             }
         }
     }
+
     .sub-menu {
-        background-color: $purple !important;
+        background-color: $purple  !important;
+
         a {
             color: white !important;
         }
+
         li {
             background-color: none !important;
         }
